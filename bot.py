@@ -55,7 +55,7 @@ COMMON_HEADERS = {
 
 def get_invoice(quantity: int, username: str):
     url = "https://api.split.tg/buy/stars"
-    payload = {"username": username, "payment_method": "wata", "quantity": quantity}
+    payload = {"username": username, "payment_method": "wata_sbp", "quantity": quantity}
     try:
         r = requests.post(url, json=payload, headers=COMMON_HEADERS, timeout=10)
         r.raise_for_status()
